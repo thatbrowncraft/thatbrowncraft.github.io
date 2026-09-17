@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cellfie — Download</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{ --ink:#eef1ee; --accent:#2f8c78; --accent-soft:#7fb8a9; }
+  *{ box-sizing:border-box; }
+  html,body{ height:100%; }
+  body{
+    margin:0;
+    background:#050807;
+    color:var(--ink);
+    font-family:'Inter', system-ui, -apple-system, sans-serif;
+    -webkit-font-smoothing:antialiased;
+  }
+  .screen{
+    max-width:480px;
+    margin:0 auto;
+    min-height:100vh;
+    background:
+      radial-gradient(ellipse 90% 40% at 50% 0%, #10231e 0%, #0a1512 55%, #060b09 100%);
+    position:relative;
+  }
+
+  /* header bar */
+  .topbar{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:0.75rem;
+    padding:0.9rem 1rem;
+    background:transparent;
+  }
+  .topbar .icon-btn{
+    width:26px; height:26px;
+    display:flex; align-items:center; justify-content:center;
+    color:var(--ink);
+    opacity:0.9;
+    flex:0 0 auto;
+  }
+  .topbar .icon-btn svg{ width:20px; height:20px; }
+  .topbar .icon-group{ display:flex; align-items:center; gap:1.1rem; }
+  .topbar .title{
+    flex:1;
+    text-align:center;
+    font-size:0.98rem;
+    font-weight:600;
+    color:var(--ink);
+    padding:0 0.5rem;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+  }
+
+  .content{ padding:4.5rem 1.6rem 3.2rem; }
+
+  .glyph{ width:44px; height:44px; display:block; margin:0 auto 1.7rem; opacity:0.9; }
+
+  h1{
+    font-family:'Fraunces', serif;
+    font-weight:500;
+    font-size:clamp(2.4rem, 10vw, 3.1rem);
+    line-height:1.05;
+    text-align:center;
+    margin:0 0 0.55rem;
+  }
+  .tagline{
+    font-family:'Fraunces', serif;
+    font-style:italic;
+    font-weight:400;
+    font-size:clamp(1.05rem, 4vw, 1.2rem);
+    text-align:center;
+    color:var(--accent-soft);
+    margin:0 0 1.9rem;
+  }
+  .lede{
+    font-size:0.98rem;
+    line-height:1.75;
+    text-align:center;
+    color:#cdd6d2;
+    max-width:400px;
+    margin:0 auto 2.6rem;
+  }
+
+  .feature-list{
+    max-width:380px;
+    margin:0 auto 2.6rem;
+    border-top:1px solid rgba(127,184,169,0.25);
+  }
+  .feature-list div{
+    padding:1rem 0.25rem;
+    border-bottom:1px solid rgba(127,184,169,0.25);
+    font-size:0.95rem;
+    text-align:center;
+    color:#e3ebe7;
+  }
+
+  .cta-block{ text-align:center; }
+  .btn{
+    display:inline-flex;
+    align-items:center;
+    gap:0.55rem;
+    background:var(--accent);
+    color:#f2faf7;
+    text-decoration:none;
+    font-family:'Inter',sans-serif;
+    font-weight:600;
+    font-size:0.98rem;
+    padding:0.95rem 1.9rem;
+    border-radius:6px;
+    transition:background 0.2s ease;
+  }
+  .btn:hover{ background:#379e88; }
+  .btn:focus-visible{ outline:2px solid #eef1ee; outline-offset:3px; }
+  .btn svg{ width:16px; height:16px; }
+
+  .version-note{
+    font-size:0.82rem;
+    color:#8fa39c;
+    margin:0.9rem 0 0;
+  }
+  .apk-note{
+    font-size:0.82rem;
+    color:#7e938c;
+    margin:1.6rem auto 0;
+    max-width:340px;
+    line-height:1.6;
+    text-align:center;
+  }
+</style>
+</head>
+<body>
+  <div class="screen">
+    <div class="content">
+      <svg class="glyph" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <polygon points="12,2.5 20.5,7.5 20.5,16.5 12,21.5 3.5,16.5 3.5,7.5" stroke="#7fb8a9" stroke-width="1.1"/>
+        <circle cx="12" cy="12" r="3" stroke="#7fb8a9" stroke-width="1.1"/>
+      </svg>
+
+      <h1>Cellfie</h1>
+      <p class="tagline">Study science, without signal</p>
+
+      <p class="lede">
+        More than a study app — a free, offline-first science learning companion for students. Learn, explore, practice, and grow, all in one place.
+      </p>
+
+      <div class="feature-list">
+        <div>Library — read, highlight, take notes</div>
+        <div>Concepts — simplified, with diagrams</div>
+        <div>Organisms — bacteria, viruses, fungi &amp; more</div>
+        <div>Laboratory — formulas, protocols, biosafety</div>
+        <div>Exam Prep — topic-wise QA, GK, current affairs</div>
+        <div>Comparison — compare concepts side by side</div>
+        <div>Vault — notes, highlights &amp; saved material</div>
+        <div>World Explorer &amp; interactive periodic table</div>
+        <div>Customizable themes &amp; fonts, in-app manual</div>
+      </div>
+
+      <div class="cta-block">
+        <a class="btn" href="https://github.com/thatbrowncraft/cellfie/releases/latest/download/Cellfie.apk" download="Cellfie.apk">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="M7 10l5 5 5-5"/><path d="M5 21h14"/></svg>
+          Download Cellfie
+        </a>
+        <p class="version-note">Android APK · latest release</p>
+        <p class="apk-note">Works offline · Free for students · No ads, just learning · Educational purpose only. This is an Android APK, not a Play Store app — you may need to allow "install unknown apps" for your browser after downloading. If the download stalls, try a full browser tab (not an in-app browser) on Wi-Fi.</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

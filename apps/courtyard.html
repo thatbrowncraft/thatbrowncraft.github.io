@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kanha Ji's Courtyard — Download</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{ --ink:#f2e3d8; --accent:#b33a3a; --accent-soft:#d9a5a0; }
+  *{ box-sizing:border-box; }
+  html,body{ height:100%; }
+  body{
+    margin:0;
+    background:#0e0505;
+    color:var(--ink);
+    font-family:'Inter', system-ui, -apple-system, sans-serif;
+    -webkit-font-smoothing:antialiased;
+  }
+  .screen{
+    max-width:480px;
+    margin:0 auto;
+    min-height:100vh;
+    background:
+      radial-gradient(ellipse 90% 40% at 50% 0%, #3a1414 0%, #1c0a0a 55%, #120606 100%);
+    position:relative;
+  }
+
+  /* header bar */
+  .topbar{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:0.75rem;
+    padding:0.9rem 1rem;
+    background:transparent;
+  }
+  .topbar .icon-btn{
+    width:26px; height:26px;
+    display:flex; align-items:center; justify-content:center;
+    color:var(--ink);
+    opacity:0.9;
+    flex:0 0 auto;
+  }
+  .topbar .icon-btn svg{ width:20px; height:20px; }
+  .topbar .icon-group{ display:flex; align-items:center; gap:1.1rem; }
+  .topbar .title{
+    flex:1;
+    text-align:center;
+    font-size:0.98rem;
+    font-weight:600;
+    color:var(--ink);
+    padding:0 0.5rem;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+  }
+
+  .content{ padding:4.5rem 1.6rem 3.2rem; }
+
+  .glyph{ width:36px; height:36px; display:block; margin:0 auto 1.7rem; opacity:0.9; }
+
+  h1{
+    font-family:'Cormorant Garamond', serif;
+    font-weight:600;
+    font-size:clamp(2.3rem, 9vw, 2.9rem);
+    line-height:1.08;
+    text-align:center;
+    margin:0 0 0.55rem;
+    letter-spacing:0.01em;
+  }
+  .tagline{
+    font-family:'Cormorant Garamond', serif;
+    font-style:italic;
+    font-size:clamp(1.05rem, 4vw, 1.2rem);
+    text-align:center;
+    color:var(--accent-soft);
+    margin:0 0 1.9rem;
+  }
+  .lede{
+    font-size:0.98rem;
+    line-height:1.75;
+    text-align:center;
+    color:#e8d7cc;
+    max-width:400px;
+    margin:0 auto 2.6rem;
+  }
+
+  .feature-list{
+    max-width:380px;
+    margin:0 auto 2.6rem;
+    border-top:1px solid rgba(217,165,160,0.22);
+  }
+  .feature-list div{
+    padding:1rem 0.25rem;
+    border-bottom:1px solid rgba(217,165,160,0.22);
+    font-size:0.95rem;
+    text-align:center;
+    color:#efe2d6;
+  }
+
+  .cta-block{ text-align:center; }
+  .btn{
+    display:inline-flex;
+    align-items:center;
+    gap:0.55rem;
+    background:var(--accent);
+    color:#fbeee7;
+    text-decoration:none;
+    font-family:'Inter',sans-serif;
+    font-weight:600;
+    font-size:0.98rem;
+    padding:0.95rem 1.9rem;
+    border-radius:6px;
+    transition:background 0.2s ease;
+  }
+  .btn:hover{ background:#c4453f; }
+  .btn:focus-visible{ outline:2px solid #f2e3d8; outline-offset:3px; }
+  .btn svg{ width:16px; height:16px; }
+
+  .version-note{
+    font-size:0.82rem;
+    color:#b89a8d;
+    margin:0.9rem 0 0;
+  }
+  .apk-note{
+    font-size:0.82rem;
+    color:#a88a7d;
+    margin:1.6rem auto 0;
+    max-width:340px;
+    line-height:1.6;
+    text-align:center;
+  }
+</style>
+</head>
+<body>
+  <div class="screen">
+    <div class="content">
+      <svg class="glyph" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 3C9.5 6 9.5 9 12 11C14.5 9 14.5 6 12 3Z" stroke="#d9a5a0" stroke-width="1.1"/>
+        <path d="M12 11C8 11 4.5 13.2 3 17.5C6.8 16.4 9.6 16.7 12 19C14.4 16.7 17.2 16.4 21 17.5C19.5 13.2 16 11 12 11Z" stroke="#d9a5a0" stroke-width="1.1"/>
+        <path d="M12 19V21.5" stroke="#d9a5a0" stroke-width="1.1"/>
+      </svg>
+
+      <h1>Kanha Ji's<br>Courtyard</h1>
+      <p class="tagline">A quiet place to sit with the Gita</p>
+
+      <p class="lede">
+        A peaceful, offline-first space inspired by the Bhagavad Gita, built to make timeless wisdom feel a little closer to everyday life — verses in a Gen Z-friendly language, with room to reflect, journal, and just breathe.
+      </p>
+
+      <div class="feature-list">
+        <div>Bhagavad Gita verses, Gen Z-friendly language</div>
+        <div>Chapters &amp; verse exploration, with search</div>
+        <div>Emotion picker — "How is your heart today?"</div>
+        <div>Collections, personal journal &amp; meditation space</div>
+        <div>Journey section &amp; personalization settings</div>
+        <div>Multiple themes, adjustable font sizes</div>
+        <div>Offline-first PWA — no connection needed</div>
+      </div>
+
+      <div class="cta-block">
+        <a class="btn" href="https://github.com/thatbrowncraft/the-Courtyard/releases/download/v1.0.0/Kanha-Ji-Courtyard.apk" download="Kanha-Ji-Courtyard.apk">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="M7 10l5 5 5-5"/><path d="M5 21h14"/></svg>
+          Download Courtyard
+        </a>
+        <p class="version-note">Android APK · v1.0.0</p>
+        <p class="apk-note">Built as a Trusted Web Activity for a clean, browser-free app experience. This is an Android APK, not a Play Store app — you may need to allow "install unknown apps" for your browser after downloading. If the download stalls, try a full browser tab (not an in-app browser) on Wi-Fi.</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
