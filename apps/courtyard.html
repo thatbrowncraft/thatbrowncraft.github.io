@@ -3,172 +3,403 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Kanha Ji's Courtyard — Download</title>
+<title>Kanha Ji's Courtyard | Download for Android</title>
+<meta name="description" content="Kanha Ji's Courtyard is a quiet digital space inspired by the Bhagavad Gita. Read, reflect, journal, and come back whenever you need. Download the Android app.">
+<meta name="theme-color" content="#F3E6CC">
+<script>
+  (function(){var t="light";try{var v=localStorage.getItem("courtyard-theme");if(v==="dark"||v==="light")t=v;}catch(e){}document.documentElement.setAttribute("data-theme",t);})();
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
-  :root{ --ink:#f2e3d8; --accent:#b33a3a; --accent-soft:#d9a5a0; }
+  :root{
+    /* light theme (default): beige paper, golden glow, deep brown ink */
+    --page:#E9DCC2;
+    --screen-bg:radial-gradient(ellipse 120% 560px at 50% 0%, #F5DFA0 0%, #F3E6CC 58%, #F1E3C8 100%);
+    --ink:#3A2316;
+    --story:#48291A;
+    --ink-soft:#5A4030;
+    --muted:#6F5644;
+    --accent-soft:#8A4B22;
+    --accent:#7B2F22;
+    --accent-hover:#672519;
+    --btn-text:#FFF3E0;
+    --line:rgba(110,70,30,.28);
+    --aside:#B8862B;
+    --toggle-bg:rgba(255,248,232,.6);
+  }
+  :root[data-theme="dark"]{
+    --page:#0e0505;
+    --screen-bg:radial-gradient(ellipse 120% 560px at 50% 0%, #3a1414 0%, #1c0a0a 60%, #150707 100%);
+    --ink:#f2e3d8;
+    --story:#ecdcd0;
+    --ink-soft:#dcc8ba;
+    --muted:#b89a8d;
+    --accent-soft:#d9a5a0;
+    --accent:#b33a3a;
+    --accent-hover:#c4453f;
+    --btn-text:#fbeee7;
+    --line:rgba(217,165,160,.22);
+    --aside:#b33a3a;
+    --toggle-bg:rgba(255,255,255,.04);
+  }
   *{ box-sizing:border-box; }
-  html,body{ height:100%; }
+  html{ -webkit-text-size-adjust:100%; }
   body{
     margin:0;
-    background:#0e0505;
+    background:var(--page);
     color:var(--ink);
-    font-family:'Inter', system-ui, -apple-system, sans-serif;
+    font-family:'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+    font-size:1rem;
+    line-height:1.7;
     -webkit-font-smoothing:antialiased;
   }
   .screen{
     max-width:480px;
     margin:0 auto;
     min-height:100vh;
-    background:
-      radial-gradient(ellipse 90% 40% at 50% 0%, #3a1414 0%, #1c0a0a 55%, #120606 100%);
-    position:relative;
+    background:var(--screen-bg);
+    padding:3.2rem 1.6rem 3rem;
   }
 
-  /* header bar */
-  .topbar{
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    gap:0.75rem;
-    padding:0.9rem 1rem;
-    background:transparent;
-  }
-  .topbar .icon-btn{
-    width:26px; height:26px;
-    display:flex; align-items:center; justify-content:center;
-    color:var(--ink);
-    opacity:0.9;
-    flex:0 0 auto;
-  }
-  .topbar .icon-btn svg{ width:20px; height:20px; }
-  .topbar .icon-group{ display:flex; align-items:center; gap:1.1rem; }
-  .topbar .title{
-    flex:1;
-    text-align:center;
-    font-size:0.98rem;
-    font-weight:600;
-    color:var(--ink);
-    padding:0 0.5rem;
-    overflow:hidden;
-    text-overflow:ellipsis;
-    white-space:nowrap;
-  }
-
-  .content{ padding:4.5rem 1.6rem 3.2rem; }
-
-  .glyph{ width:36px; height:36px; display:block; margin:0 auto 1.7rem; opacity:0.9; }
-
+  /* opening */
+  .glyph{ width:2.4rem; height:2.4rem; display:block; margin:0 auto 1.5rem; opacity:.92; color:var(--accent-soft); }
   h1{
-    font-family:'Cormorant Garamond', serif;
+    font-family:'Cormorant Garamond', Georgia, serif;
     font-weight:600;
-    font-size:clamp(2.3rem, 9vw, 2.9rem);
-    line-height:1.08;
+    font-size:clamp(2.4rem, 10vw, 3rem);
+    line-height:1.06;
     text-align:center;
-    margin:0 0 0.55rem;
-    letter-spacing:0.01em;
+    letter-spacing:.01em;
+    margin:0 0 .6rem;
   }
   .tagline{
-    font-family:'Cormorant Garamond', serif;
+    font-family:'Cormorant Garamond', Georgia, serif;
     font-style:italic;
-    font-size:clamp(1.05rem, 4vw, 1.2rem);
+    font-size:1.25rem;
     text-align:center;
     color:var(--accent-soft);
-    margin:0 0 1.9rem;
+    margin:0 0 1.7rem;
   }
   .lede{
-    font-size:0.98rem;
-    line-height:1.75;
+    font-family:'Cormorant Garamond', Georgia, serif;
+    font-weight:500;
+    font-size:1.27rem;
+    line-height:1.55;
     text-align:center;
-    color:#e8d7cc;
-    max-width:400px;
-    margin:0 auto 2.6rem;
+    color:var(--story);
+    margin:0 auto 1.9rem;
   }
 
-  .feature-list{
-    max-width:380px;
-    margin:0 auto 2.6rem;
-    border-top:1px solid rgba(217,165,160,0.22);
-  }
-  .feature-list div{
-    padding:1rem 0.25rem;
-    border-bottom:1px solid rgba(217,165,160,0.22);
-    font-size:0.95rem;
-    text-align:center;
-    color:#efe2d6;
-  }
-
-  .cta-block{ text-align:center; }
+  /* download buttons (same look, two placements) */
   .btn{
-    display:inline-flex;
+    display:flex;
     align-items:center;
-    gap:0.55rem;
+    justify-content:center;
+    gap:.6rem;
+    width:100%;
+    max-width:22.5rem;
+    min-height:3.5rem;
+    margin:0 auto;
+    padding:.9rem 1.4rem;
     background:var(--accent);
-    color:#fbeee7;
+    color:var(--btn-text);
     text-decoration:none;
-    font-family:'Inter',sans-serif;
+    font-family:'Inter', system-ui, sans-serif;
     font-weight:600;
-    font-size:0.98rem;
-    padding:0.95rem 1.9rem;
-    border-radius:6px;
-    transition:background 0.2s ease;
+    font-size:1.05rem;
+    border-radius:8px;
+    transition:background .2s ease;
   }
-  .btn:hover{ background:#c4453f; }
-  .btn:focus-visible{ outline:2px solid #f2e3d8; outline-offset:3px; }
-  .btn svg{ width:16px; height:16px; }
-
-  .version-note{
-    font-size:0.82rem;
-    color:#b89a8d;
-    margin:0.9rem 0 0;
-  }
-  .apk-note{
-    font-size:0.82rem;
-    color:#a88a7d;
-    margin:1.6rem auto 0;
-    max-width:340px;
-    line-height:1.6;
+  .btn:hover{ background:var(--accent-hover); }
+  .btn:active{ background:var(--accent-hover); }
+  .btn:focus-visible{ outline:3px solid var(--ink); outline-offset:3px; }
+  .btn svg{ width:1.1rem; height:1.1rem; flex:0 0 auto; }
+  .hint{
+    font-size:.85rem;
+    color:var(--muted);
     text-align:center;
+    margin:.75rem 0 0;
+  }
+
+  /* ornament between parts */
+  .rule{
+    display:flex;
+    align-items:center;
+    gap:.9rem;
+    margin:2.8rem 0 2.4rem;
+    color:var(--accent-soft);
+    opacity:.75;
+  }
+  .rule::before, .rule::after{
+    content:"";
+    flex:1;
+    height:1px;
+    background:var(--line);
+  }
+  .rule svg{ width:.9rem; height:.9rem; flex:0 0 auto; }
+
+  /* reading */
+  h2{
+    font-family:'Cormorant Garamond', Georgia, serif;
+    font-weight:600;
+    font-size:1.85rem;
+    line-height:1.15;
+    color:var(--ink);
+    margin:0 0 1rem;
+  }
+  h3{
+    font-family:'Cormorant Garamond', Georgia, serif;
+    font-weight:600;
+    font-size:1.4rem;
+    line-height:1.2;
+    color:var(--accent-soft);
+    margin:0 0 .35rem;
+  }
+  .story{
+    font-family:'Cormorant Garamond', Georgia, serif;
+    font-weight:500;
+    font-size:1.2rem;
+    line-height:1.6;
+    color:var(--story);
+    margin:0 0 1.1rem;
+  }
+  p{ margin:0 0 1rem; font-size:.97rem; color:var(--ink-soft); }
+  .group{
+    padding:1.2rem 0;
+    border-top:1px solid var(--line);
+  }
+  .group:last-of-type{ border-bottom:1px solid var(--line); }
+  .group p:last-child{ margin-bottom:0; }
+
+  .pull{
+    font-family:'Cormorant Garamond', Georgia, serif;
+    font-style:italic;
+    font-weight:500;
+    font-size:1.6rem;
+    line-height:1.35;
+    text-align:center;
+    color:var(--ink);
+    margin:2.6rem 0 0;
+    padding:0 .3rem;
+  }
+  .pull span{ display:block; }
+  .pull span + span{ margin-top:.35rem; }
+
+  .aside{
+    border-left:2px solid var(--aside);
+    padding:.1rem 0 .1rem 1rem;
+    margin:1.4rem 0 0;
+  }
+  .aside p{ margin:0; font-size:.93rem; color:var(--ink-soft); }
+
+  /* closing */
+  .closing{ text-align:center; }
+  .closing .story{ text-align:center; margin-bottom:1.4rem; }
+  .apk-note{
+    font-size:.85rem;
+    line-height:1.65;
+    color:var(--muted);
+    margin:1.5rem auto 0;
+    max-width:22.5rem;
+    text-align:center;
+  }
+  .apk-note + .apk-note{ margin-top:.7rem; }
+  .small-note{
+    font-size:.9rem;
+    color:var(--muted);
+  }
+  .signoff{
+    font-family:'Cormorant Garamond', Georgia, serif;
+    font-style:italic;
+    font-size:1.1rem;
+    color:var(--accent-soft);
+    text-align:center;
+    margin:2rem 0 0;
+  }
+
+  /* theme toggle */
+  .toolbar{ display:flex; justify-content:flex-end; margin:-1.6rem 0 1rem; }
+  .theme-btn{
+    min-height:2.75rem;
+    padding:.5rem 1rem;
+    background:var(--toggle-bg);
+    color:var(--ink-soft);
+    border:1px solid var(--line);
+    border-radius:999px;
+    font-family:'Inter', system-ui, sans-serif;
+    font-size:.85rem;
+    font-weight:500;
+    cursor:pointer;
+  }
+  .theme-btn:focus-visible{ outline:3px solid var(--ink); outline-offset:3px; }
+
+  /* Wide screens. Phones set to "Desktop site" report ~980px, so scale the
+     whole page up to fill it; real desktop windows get a comfortable column. */
+  @media (min-width:700px) and (max-width:1099px){
+    html{ font-size:3.9vw; }
+    .screen{ max-width:none; }
+  }
+  @media (min-width:1100px){
+    html{ font-size:19px; }
+    .screen{ max-width:680px; }
   }
 </style>
 </head>
 <body>
   <div class="screen">
-    <div class="content">
-      <svg class="glyph" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M12 3C9.5 6 9.5 9 12 11C14.5 9 14.5 6 12 3Z" stroke="#d9a5a0" stroke-width="1.1"/>
-        <path d="M12 11C8 11 4.5 13.2 3 17.5C6.8 16.4 9.6 16.7 12 19C14.4 16.7 17.2 16.4 21 17.5C19.5 13.2 16 11 12 11Z" stroke="#d9a5a0" stroke-width="1.1"/>
-        <path d="M12 19V21.5" stroke="#d9a5a0" stroke-width="1.1"/>
+
+    <div class="toolbar">
+      <button class="theme-btn" id="themeBtn" type="button">Dark theme</button>
+    </div>
+
+    <header>
+      <svg class="glyph" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M12 3C9.5 6 9.5 9 12 11C14.5 9 14.5 6 12 3Z" stroke="currentColor" stroke-width="1.1"/>
+        <path d="M12 11C8 11 4.5 13.2 3 17.5C6.8 16.4 9.6 16.7 12 19C14.4 16.7 17.2 16.4 21 17.5C19.5 13.2 16 11 12 11Z" stroke="currentColor" stroke-width="1.1"/>
+        <path d="M12 19V21.5" stroke="currentColor" stroke-width="1.1"/>
       </svg>
 
       <h1>Kanha Ji's<br>Courtyard</h1>
       <p class="tagline">A quiet place to sit with the Gita</p>
 
       <p class="lede">
-        A peaceful, offline-first space inspired by the Bhagavad Gita, built to make timeless wisdom feel a little closer to everyday life — verses in a Gen Z-friendly language, with room to reflect, journal, and just breathe.
+        Some days you show up overwhelmed. Some days angry, anxious, heartbroken, or just curious. Some days you only need a quiet minute. This is a small digital space inspired by the Bhagavad Gita, where you can read a verse, sit with it, write something down, and come back whenever you need.
       </p>
 
-      <div class="feature-list">
-        <div>Bhagavad Gita verses, Gen Z-friendly language</div>
-        <div>Chapters &amp; verse exploration, with search</div>
-        <div>Emotion picker — "How is your heart today?"</div>
-        <div>Collections, personal journal &amp; meditation space</div>
-        <div>Journey section &amp; personalization settings</div>
-        <div>Multiple themes, adjustable font sizes</div>
-        <div>Offline-first PWA — no connection needed</div>
+      <a class="btn" href="https://github.com/thatbrowncraft/the-Courtyard/releases/download/v1.0.0/Kanha-Ji-Courtyard.apk" download="Kanha-Ji-Courtyard.apk">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="M7 10l5 5 5-5"/><path d="M5 21h14"/></svg>
+        Download Courtyard
+      </a>
+      <p class="hint">Android app. No account, no sign-in.</p>
+    </header>
+
+    <div class="rule" aria-hidden="true">
+      <svg viewBox="0 0 14 14" fill="none"><path d="M7 1L13 7L7 13L1 7Z" stroke="currentColor" stroke-width="1"/></svg>
+    </div>
+
+    <main>
+
+      <section>
+        <h2>Come sit for a while</h2>
+        <p class="story">Kanha Ji's Courtyard is a personal, non-commercial project for the moments when you don't want another productivity app, another habit tracker, or another notification telling you to keep going. Sometimes you just want somewhere quiet to read one verse and breathe.</p>
+        <p class="story">There are no streaks, badges or points here, and nobody is checking whether you came back tomorrow. If it helps you today, it has done its job.</p>
+
+        <p class="pull">
+          <span>Some days you read a verse.</span>
+          <span>Some days you write.</span>
+          <span>Some days you just sit there for a few minutes.</span>
+          <span>All of it is fine.</span>
+        </p>
+      </section>
+
+      <div class="rule" aria-hidden="true">
+        <svg viewBox="0 0 14 14" fill="none"><path d="M7 1L13 7L7 13L1 7Z" stroke="currentColor" stroke-width="1"/></svg>
       </div>
 
-      <div class="cta-block">
-        <a class="btn" href="https://github.com/thatbrowncraft/the-Courtyard/releases/download/v1.0.0/Kanha-Ji-Courtyard.apk" download="Kanha-Ji-Courtyard.apk">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="M7 10l5 5 5-5"/><path d="M5 21h14"/></svg>
-          Download Courtyard
-        </a>
-        <p class="version-note">Android APK · v1.0.0</p>
-        <p class="apk-note">Built as a Trusted Web Activity for a clean, browser-free app experience. This is an Android APK, not a Play Store app — you may need to allow "install unknown apps" for your browser after downloading. If the download stalls, try a full browser tab (not an in-app browser) on Wi-Fi.</p>
+      <section>
+        <h2>Old words, everyday questions</h2>
+        <p class="story">The Gita is the heart of this whole place. The Courtyard is only a companion to it, and it isn't a replacement for the scripture, your teachers, the traditional commentaries or whatever practice you already keep.</p>
+        <p class="story">What I've added is a modern layer in everyday language. Open a verse and you'll find the Sanskrit, a transliteration and a translation, then some context for what's happening in the story, what Krishna's words (or silence) point to, a reflection for your own life, a small passage called "If Kanha Ji sat beside you today...", a takeaway, and a few questions to sit with.</p>
+
+        <div class="aside">
+          <p>Those reflections are mine. They're one person's way in, not an official reading. Treat them like notes in the margin, and go to your teachers and the traditional texts for the real depth.</p>
+        </div>
+      </section>
+
+      <div class="rule" aria-hidden="true">
+        <svg viewBox="0 0 14 14" fill="none"><path d="M7 1L13 7L7 13L1 7Z" stroke="currentColor" stroke-width="1"/></svg>
       </div>
+
+      <section>
+        <h2>What you can do here</h2>
+
+        <div class="group">
+          <h3>Arrive</h3>
+          <p>The home screen simply asks, "How is your heart today?" Choose overwhelmed, anxious, angry, lost, in need of peace, or just here to read, and it answers with a few gentle words. You don't have to explain yourself.</p>
+        </div>
+
+        <div class="group">
+          <h3>Read</h3>
+          <p>All 18 chapters are laid out, and I'm filling in the verses chapter by chapter, so some are further along than others. Search helps when you remember a word or an idea but not where it lives, and Collections gather verses and themes so they're easy to find again.</p>
+        </div>
+
+        <div class="group">
+          <h3>Reflect</h3>
+          <p>There's a Meditation space with a simple breathing circle and no timer to beat, and a Journey section that looks back gently at how you've moved through the courtyard. If you want some atmosphere, you can turn on quiet ambience like temple bells or flowing water. It never starts on its own.</p>
+        </div>
+
+        <div class="group">
+          <h3>Write</h3>
+          <p>The Journal is for whatever you feel like putting down after a verse: a thought, a question, something you're carrying. It stays on your device, with no account, no cloud and no analytics on what you write. You can export it as a file and import it on another device. Do that once in a while, because clearing your app or browser data can erase it.</p>
+        </div>
+
+        <div class="group">
+          <h3>Return</h3>
+          <p>Nothing here asks you to keep up. The Courtyard remembers the last verse you were reading so you can pick it back up, and there's no streak to protect.</p>
+        </div>
+
+        <div class="group">
+          <h3>Make it yours</h3>
+          <p>Five earthy themes (Dried Leaves, Sandalwood, Forest Earth, Terracotta and Monsoon Soil), nine text sizes for anyone who needs bigger words, and a reduced-animation setting if you want the calm without the movement.</p>
+        </div>
+      </section>
+
+      <div class="rule" aria-hidden="true">
+        <svg viewBox="0 0 14 14" fill="none"><path d="M7 1L13 7L7 13L1 7Z" stroke="currentColor" stroke-width="1"/></svg>
+      </div>
+
+      <section>
+        <h2>Why I made it</h2>
+        <p class="story">I wanted the Gita to feel like something I could walk into on an ordinary day, not something I had to be ready for. So I built a place that doesn't perform or push. It just sits there with the words and leaves the door open.</p>
+      </section>
+
+      <section>
+        <h3>A small technical note</h3>
+        <p class="small-note">Under the hood it's a simple web app (HTML, CSS and JavaScript) built as an installable PWA. This Android APK wraps it as a Trusted Web Activity, so it opens like a regular app without the browser bar. It's offline-first: the app itself, chapters you've already opened and ambience you've already played stay available without internet.</p>
+      </section>
+
+    </main>
+
+    <div class="rule" aria-hidden="true">
+      <svg viewBox="0 0 14 14" fill="none"><path d="M7 1L13 7L7 13L1 7Z" stroke="currentColor" stroke-width="1"/></svg>
     </div>
+
+    <div class="closing">
+      <p class="story">Read one verse. Sit with it a while. Write a line if you feel like it. Come back whenever, or don't. The door stays open. Take it with you.</p>
+
+      <a class="btn" href="https://github.com/thatbrowncraft/the-Courtyard/releases/download/v1.0.0/Kanha-Ji-Courtyard.apk" download="Kanha-Ji-Courtyard.apk">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="M7 10l5 5 5-5"/><path d="M5 21h14"/></svg>
+        Download Courtyard
+      </a>
+      <p class="hint">Android APK, v1.0.0</p>
+
+      <p class="apk-note">This is an Android APK, not a Play Store app, so your phone may ask you to allow "install unknown apps" for your browser after the download. If the download stalls, open this page in a full browser tab (not an in-app browser) and try again on Wi-Fi.</p>
+
+      <p class="signoff">Made by That Brown Craft</p>
+    </div>
+
   </div>
+
+  <script>
+    (function(){
+      var root=document.documentElement, btn=document.getElementById("themeBtn");
+      var meta=document.querySelector('meta[name="theme-color"]');
+      var bar={light:"#F3E6CC",dark:"#1c0a0a"};
+      function sync(){
+        var t=root.getAttribute("data-theme")==="dark"?"dark":"light";
+        btn.textContent=t==="dark"?"Light theme":"Dark theme";
+        if(meta) meta.setAttribute("content",bar[t]);
+      }
+      btn.addEventListener("click",function(){
+        var n=root.getAttribute("data-theme")==="dark"?"light":"dark";
+        root.setAttribute("data-theme",n);
+        try{localStorage.setItem("courtyard-theme",n);}catch(e){}
+        sync();
+      });
+      sync();
+    })();
+  </script>
 </body>
 </html>
